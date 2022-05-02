@@ -1,0 +1,174 @@
+
+$redColor: red;
+$blueColor: blue;
+$greenColor: green;
+$whiteColor: white;
+
+.container-1 {
+
+   color: rgb(128, 169, 202);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 150px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+   }
+
+   .darken-1 {
+      background-color: darken($redColor, 5%);
+   }
+   
+   .darken-2 {
+      background-color: darken($redColor, 10%);
+   }
+   
+   .darken-3 {
+      background-color: darken($redColor, 15%);
+   }
+   
+   .darken-4 {
+      background-color: darken($redColor, 20%);
+   }
+   
+   .base-color { 
+      background-color: $redColor;
+      color: $whiteColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($redColor, 5%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($redColor, 10%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($redColor, 15%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($redColor, 20%);   
+   }
+}
+
+.container-2 {
+
+   color: rgb(128, 169, 202);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 150px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+   }
+
+   .darken-1 {
+      background-color: darken($blueColor, 5%);
+   }
+   
+   .darken-2 {
+      background-color: darken($blueColor, 10%);
+   }
+   
+   .darken-3 {
+      background-color: darken($blueColor, 15%);
+   }
+   
+   .darken-4 {
+      background-color: darken($blueColor, 20%);
+   }
+   
+   .base-color { 
+      background-color: $blueColor;
+      color: $whiteColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($blueColor, 5%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($blueColor, 10%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($blueColor, 15%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($blueColor, 20%);   
+   }
+}
+
+.container-3 {
+
+   color: rgb(128, 169, 202);
+   display: flex;
+   justify-content: space-around;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+
+   .box {
+      width: 150px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid grey;
+      border-radius: 3px;
+   }
+
+   .darken-1 {
+      background-color: darken($greenColor, 5%);
+   }
+   
+   .darken-2 {
+      background-color: darken($greenColor, 10%);
+   }
+   
+   .darken-3 {
+      background-color: darken($greenColor, 15%);
+   }
+   
+   .darken-4 {
+      background-color: darken($greenColor, 20%);
+   }
+   
+   .base-color { 
+      background-color: $greenColor;
+      color: $whiteColor;
+   }
+   
+   .lighten-1 {
+      background-color: lighten($greenColor, 5%);
+   }
+   
+   .lighten-2 {
+      background-color: lighten($greenColor, 10%);   
+   }
+   
+   .lighten-3 {
+      background-color: lighten($greenColor, 15%);   
+   }
+   
+   .lighten-4 {
+      background-color: lighten($greenColor, 20%);   
+   }
+}
+
