@@ -64,3 +64,9 @@ export const characterStatus = css`
   }
 `
 
+export const rechercheContainer = css`
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+`;
+

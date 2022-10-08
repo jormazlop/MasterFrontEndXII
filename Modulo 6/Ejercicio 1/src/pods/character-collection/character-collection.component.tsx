@@ -36,11 +36,11 @@ export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
        }
 
        return <>{list}</>;
- }
+  }
 
   return (
-    <div className={classes.charactersPage}>
-      {memberList()}
-    </div>
+      <div className={classes.charactersPage}>
+        {memberList()}
+      </div>
   );
 };
