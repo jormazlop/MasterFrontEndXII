@@ -5,4 +5,5 @@ export interface Character {
   name: string;
   species: string;
   status: string;
+  bestSentences: string[];
 }
