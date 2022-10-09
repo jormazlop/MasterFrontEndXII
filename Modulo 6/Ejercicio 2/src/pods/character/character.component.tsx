@@ -27,8 +27,9 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
   }
 
   return (
-    <div><button className={classes.returnButton} onClick={e => returnButton()}>Volver</button>
-    {characterInfo()}
+    <div>
+      <button className={classes.returnButton} onClick={e => returnButton()}>Volver</button>
+      {characterInfo()}
     </div>
   );
 };

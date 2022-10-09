@@ -4,15 +4,14 @@ export const charactersPage = css`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-`
-
+`;
 
 export const characterContainer = css`
   display: flex;
   margin: 10px;
   border-radius: 10px;
   width: 500px;
-  height: 200px;
+  height: 250px;
   transition-duration: 0.2s;
 
   &:hover {
@@ -24,7 +23,7 @@ export const characterContainer = css`
 export const characterImage = css`
   border-radius: 10px 0 0 10px;
   width: 200px;
-`
+`;
 
 export const characterDescription = css`
   background-color: grey;
@@ -45,7 +44,7 @@ export const characterName = css`
   &:hover {
     color: #f08d49;
   }
-`
+`;
 
 export const characterSpecie = css`
   font-size: 15px;
@@ -54,7 +53,8 @@ export const characterSpecie = css`
   &:hover {
     color: #f08d49;
   }
-`
+`;
+
 export const characterStatus = css`
   font-size: 15px;
   text-align: center;
@@ -62,5 +62,25 @@ export const characterStatus = css`
   &:hover {
     color: #f08d49;
   }
-`
+`;
+
+export const deleteButton = css`
+  background-color: #f08d49;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+`;
+
+export const addButton = css`
+  background-color: #f08d49;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
