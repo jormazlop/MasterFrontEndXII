@@ -32,10 +32,36 @@ export const CharacterCollectionContainer = () => {
     }
   }
 
+  const closeSearch = () => {
+    setSearch('');
+    setCharacterCollection(characterInitialCollection);
+  }
+
+  const showButtonClose = () => {
+    return search ? <img onClick={e => closeSearch()} className={classes.closeSearchButton} src="../../assets/close-search.png" alt="Close" /> : <></>;
+  }
+
+  const handleKeyUp = (e) => {
+    if(e.key === 'Enter') {
+      buttonSearch();
+    }
+
+    if(e.key === 'Escape') {
+      closeSearch();
+    }
+  }
+
   return (
     <div>
-      <div className={classes.rechercheContainer}>
-      <input type="text" value={search} onChange={handleChange}/><button onClick={e => buttonSearch()}>Buscar</button>
+      <div className={classes.searchContainer}>
+        <input placeholder="Buscar personaje..."
+               type="text"
+               value={search}
+               onChange={handleChange}
+               onKeyUp={handleKeyUp}
+               className={classes.searchInput}/>
+        {showButtonClose()}
+        <button onClick={e => buttonSearch()} className={classes.searchButton}>Buscar</button>
       </div>
       <CharacterCollectionComponent characterCollection={characterCollection}/>
     </div>

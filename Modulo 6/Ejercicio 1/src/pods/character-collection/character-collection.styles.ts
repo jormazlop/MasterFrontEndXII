@@ -63,10 +63,48 @@ export const characterStatus = css`
     color: #f08d49;
   }
 `
-
-export const rechercheContainer = css`
+export const searchContainer = css`
   display: flex;
   justify-content: center;
   margin: 20px;
 `;
 
+export const searchInput = css`
+  width: 200px;
+  padding: 10px 40px 10px 20px;
+  border-radius: 50px 0 0 50px;
+  border: none;
+  font-family: cursive;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const searchButton = css`
+  background-color: #f08d49;
+  border: none;
+  padding: 0 20px;
+  color: white;
+  border-radius : 0 50px 50px 0;
+  position: relative;
+  left: -20px;
+  transition-duration: 0.5s;
+  font-family: cursive;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f1690c;
+  }
+`;
+
+export const closeSearchButton = css`
+  height: 20px;
+  position: relative;
+  left: -30px;
+  top: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
