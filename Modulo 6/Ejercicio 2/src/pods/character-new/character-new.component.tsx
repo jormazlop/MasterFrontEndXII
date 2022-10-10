@@ -1,3 +1,4 @@
+import { getCharacterCollection } from 'pods/character-collection/api';
 import { Character } from 'pods/character/api';
 import React from 'react';
 import { createCharacter } from './api';
@@ -12,8 +13,17 @@ export const NewCharacterComponent: React.FunctionComponent<Props> = (props) => 
   const [ gender, setGender ] = React.useState('');
   const [ specie, setSpecie ] = React.useState('');
   const [ status, setStatus ] = React.useState('');
+  const [ image, setImage ] = React.useState('');
 
   const [ error, setError ] = React.useState(false);
+
+  const [maxId, setMaxId ] = React.useState<number>(Number.MAX_VALUE);
+
+  React.useEffect(() => {
+    getCharacterCollection().then(response => {
+      setMaxId(Math.max(...response.map(x => x.id)) + 1);
+    });
+  }, []);
 
   const characterInfo = () => {
 
@@ -33,20 +43,24 @@ export const NewCharacterComponent: React.FunctionComponent<Props> = (props) => 
       setStatus(e.target.value);
     }
 
+    const handleImage = (e) => {
+      setImage(e.target.value);
+    }
+
     const addCharacter = () => {
       if(name && gender && specie && status) {
 
         const newChar: Character = {
-          id: 7,
+          id: maxId,
           gender: gender,
           name: name,
           species: specie,
           status: status,
-          image: '',
+          image: image ? image : "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
           bestSentences: ['']
         }
-
         createCharacter(newChar);
+        history.back();
 
       } else {
         setError(true);
@@ -60,31 +74,34 @@ export const NewCharacterComponent: React.FunctionComponent<Props> = (props) => 
       } else {
         return <></>;
       }
-
     }
 
     return <div className={classes.characterContainer}>
                 <label>
-                Nombre :
+                <strong>*</strong> Nombre :
                 <input type="text" name="name" className={classes.characterInput} value={name} onChange={handleName}/>
                 </label>
                 <label>
-                Genero :
+                <strong>*</strong> Genero :
                 <input type="text" name="gender" className={classes.characterInput} value={gender} onChange={handleGender}/>
                 </label>
                 <label>
-                Especie :
+                <strong>*</strong> Especie :
                 <input type="text" name="specie" className={classes.characterInput} value={specie} onChange={handleSpecie}/>
                 </label>
                 <label>
-                Estado :
+                <strong>*</strong> Estado :
                 <input type="text" name="status" className={classes.characterInput} value={status} onChange={handleStatus}/>
                 </label>
+                <label>
+                Imagen :
+                <input type="text" name="imagen" className={classes.characterInput} value={image} onChange={handleImage}/>
+                </label>
+                * Campo obligatorio
                 {showError()}
-                <button onClick={e => addCharacter()}>Crear</button>
+                <button onClick={e => addCharacter()} className={classes.addButton}>Crear</button>
            </div>;
   }
-
 
   const returnButton = () => {
     history.back();

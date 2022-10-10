@@ -22,6 +22,7 @@ export const CharacterCollectionContainer = () => {
     deleteCharacter(id);
     getCharacterCollection().then(response => {
       setCharacterCollection(response)
+      window.location.reload();
     });
   }
 

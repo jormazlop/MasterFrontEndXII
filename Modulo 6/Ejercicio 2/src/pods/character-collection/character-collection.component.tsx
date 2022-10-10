@@ -6,7 +6,7 @@ import { linkRoutes } from 'core/router';
 
 interface Props {
   characterCollection: Character[],
-  onDelete: (id: number) => void;
+  onDelete: (id: number) => void
 }
 
 export const CharacterCollectionComponent: React.FunctionComponent<Props> = (

@@ -43,3 +43,18 @@ export const error = css`
   font-family: cursive;
 `;
 
+export const addButton = css`
+  background-color: #f08d49;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-family: cursive;
+  transition-duration: 0.5s;
+
+  &:hover {
+    cursor: url('../assets/cursor-rick.png'), pointer;
+    background-color: #f1690c;
+  }
+`;
+

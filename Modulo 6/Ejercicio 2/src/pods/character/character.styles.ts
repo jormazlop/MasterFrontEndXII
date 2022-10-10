@@ -35,3 +35,50 @@ export const returnButton = css`
   }
 `;
 
+export const bestSentenceInput = css`
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const addSentence = css`
+  background-color: #f08d49;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-family: cursive;
+  transition-duration: 0.5s;
+
+  &:hover {
+    cursor: url('../assets/cursor-rick.png'), pointer;
+    background-color: #f1690c;
+  }
+`;
+
+
+export const deleteSentence = css`
+  background-color: #f08d49;
+  color: white;
+  border: none;
+  padding: 0 10px;
+  border-radius: 15px;
+  font-family: cursive;
+  transition-duration: 0.5s;
+
+  &:hover {
+    cursor: url('../assets/cursor-rick.png'), pointer;
+    background-color: #f1690c;
+  }
+`;
+
+export const sentencesContainer = css`
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+`;

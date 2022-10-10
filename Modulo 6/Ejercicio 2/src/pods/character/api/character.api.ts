@@ -7,4 +7,8 @@ export const getCharacter = async (id: string): Promise<Character> => {
   return await Axios.get(url + "/" + id).then(response => response.data);
 };
 
+export const updateCharacter = async (char: Character) => {
+  Axios.put(url + "/" + char.id, char).then(response => response.data);
+};
+
 
